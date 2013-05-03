@@ -37,43 +37,54 @@
 			<artifactId>jsp-2.1-glassfish</artifactId>
 			<version>2.1.v20100127</version>
 		</dependency>
+		
+		    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+<dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-api</artifactId>
+  <version>1.7.5</version>
+</dependency>
+
+
+<dependency>
+	<groupId>commons-fileupload</groupId>
+	<artifactId>commons-fileupload</artifactId>
+	<version>1.3</version>
+</dependency>
+
+<dependency>
+	<groupId>commons-io</groupId>
+	<artifactId>commons-io</artifactId>
+	<version>2.4</version>
+</dependency>
+		
+		
 	</dependencies>
 
 	<build>
-  <!--  <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.4</version>
-        <executions>
-          <execution>
-            <id>copy</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>[ groupId ]</groupId>
-                  <artifactId>[ artifactId ]</artifactId>
-                  <version>[ version ]</version>
-                  <type>[ packaging ]</type>
-                  <classifier> [classifier - optional] </classifier>
-                  <overWrite>[ true or false ]</overWrite>
-                  <outputDirectory>[ output directory ]</outputDirectory>
-                  <destFileName>[ filename ]</destFileName>
-                </artifactItem>
-              </artifactItems>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins> -->
 
-		<plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> 
-			<version>2.4</version> <executions> <execution> <id>copy-dependencies</id> 
-			<phase>package</phase> <goals><goal>copy-dependencies</goal></goals> </execution> 
-			</executions> </plugin> </plugins>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 </project>

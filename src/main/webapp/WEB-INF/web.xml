@@ -19,6 +19,19 @@
     <servlet-name>hello</servlet-name>
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
+  
+  
+  	<servlet>
+		<description>An Upload Servlet</description>
+		<display-name>UploadResumeServlet</display-name>
+		<servlet-name>UploadResumeServlet</servlet-name>
+		<servlet-class>com.ijoshluisaac.my.UploadResumeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UploadResumeServlet</servlet-name>
+		<url-pattern>/UploadResumeServletPath</url-pattern>
+	</servlet-mapping>
 
 
 </web-app>
