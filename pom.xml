@@ -40,7 +40,7 @@
 	</dependencies>
 
 	<build>
-    <plugins>
+  <!--  <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
@@ -65,16 +65,15 @@
                   <destFileName>[ filename ]</destFileName>
                 </artifactItem>
               </artifactItems>
-              <!-- other configurations here -->
             </configuration>
           </execution>
         </executions>
       </plugin>
-    </plugins>
+    </plugins> -->
 
-		<!-- <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> 
+		<plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> 
 			<version>2.4</version> <executions> <execution> <id>copy-dependencies</id> 
 			<phase>package</phase> <goals><goal>copy-dependencies</goal></goals> </execution> 
-			</executions> </plugin> </plugins> -->
+			</executions> </plugin> </plugins>
 	</build>
 </project>
