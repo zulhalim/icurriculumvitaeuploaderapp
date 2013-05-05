@@ -129,7 +129,8 @@ code {
 			</div> -->
 
 
-			<form enctype="multipart/form-data" method="post" action="UploadResumeServletPath" class="form-horizontal">
+			<form enctype="multipart/form-data" method="post"
+				action="UploadResumeServletPath" class="form-horizontal">
 				<fieldset>
 					<legend>
 						Upload Resume/<abbr title="Curriculum Vitae" class="initialism">CV</abbr>
@@ -139,11 +140,12 @@ code {
 					<div class="control-group">
 						<label class="control-label">Full Name</label>
 						<div class="controls">
-						<div class="input-prepend">
-						    <span class="add-on"><i class="icon-user"></i></span>
-							<input class="input-xlarge" type="text" name="fullname"
-								placeholder="Joshua Uzochukwu Nwankwo"></div> <span
-								class="help-block">Example: Joshua Uzochukwu Nwankwo</span>
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-user"></i></span> <input
+									class="input-xlarge" type="text" name="fullname"
+									placeholder="Joshua Uzochukwu Nwankwo">
+							</div>
+							<span class="help-block">Example: Joshua Uzochukwu Nwankwo</span>
 						</div>
 
 					</div>
@@ -151,15 +153,29 @@ code {
 					<div class="control-group">
 						<label class="control-label">Email</label>
 						<div class="controls">
-						<div class="input-prepend">
-						    <span class="add-on"><i class="icon-envelope"></i></span>
-							<input  name="userEmail" class="input-xlarge" type="text"
-								placeholder="joshluisaac@gmail.com"> </div> <span
-								class="help-block">Example: joshluisaac@gmail.com</span>
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-envelope"></i></span> <input
+									name="userEmail" class="input-xlarge" type="text"
+									placeholder="joshluisaac@gmail.com">
+							</div>
+							<span class="help-block">Example: joshluisaac@gmail.com</span>
 
 						</div>
 					</div>
-					
+
+					<div class="control-group">
+						<label class="control-label">Github Account</label>
+						<div class="controls">
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-envelope"></i></span> <input
+									name="githubAccount" class="input-xlarge" type="text"
+									placeholder="https://github.com/joshluisaac">
+							</div>
+							<span class="help-block">Example:https://github.com/joshluisaac</span>
+
+						</div>
+					</div>
+
 					<div class="control-group">
 						<div class="controls">
 							<div class="input-prepend">
@@ -173,9 +189,8 @@ code {
 
 					<div class="control-group">
 						<div class="controls">
-							<label class="checkbox"> <input name="fileIsIncluded" type="checkbox"
-								checked="checked"> Included
-								attachment?
+							<label class="checkbox"> <input name="fileIsIncluded"
+								type="checkbox" checked="checked"> Included attachment?
 							</label>
 							<button type="submit" class="btn btn-small btn-primary">
 								<i class="icon-file  icon-white"></i>Upload Resume
