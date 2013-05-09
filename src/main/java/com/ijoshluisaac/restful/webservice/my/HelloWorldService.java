@@ -1,4 +1,4 @@
-package com.joshluisaac.restful.webservice.my;
+package com.ijoshluisaac.restful.webservice.my;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

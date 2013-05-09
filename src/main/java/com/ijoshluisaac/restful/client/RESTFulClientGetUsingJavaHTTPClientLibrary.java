@@ -7,7 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
  
-public class RESTFulClientGet {
+public class RESTFulClientGetUsingJavaHTTPClientLibrary {
  
 	public static void main(String[] args) {
  
@@ -17,9 +17,11 @@ public class RESTFulClientGet {
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
 		conn.setRequestProperty("Accept", "application/json");
- 
+		System.out.println(conn.getResponseCode());
+		
+		
 		if (conn.getResponseCode() != 200) {
-			throw new RuntimeException("Failed : HTTP error code : "
+			throw new RuntimeException("Failed : HTTP Response Error Code: "
 					+ conn.getResponseCode());
 		}
  
@@ -27,7 +29,7 @@ public class RESTFulClientGet {
 			(conn.getInputStream())));
  
 		String output;
-		System.out.println("Output from Server .... \n");
+		System.out.println("Successfully Executed RESTFul GET Using Java HTTP Client Library .... \n");
 		while ((output = br.readLine()) != null) {
 			System.out.println(output);
 		}

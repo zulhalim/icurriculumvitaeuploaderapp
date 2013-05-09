@@ -8,7 +8,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
  
-public class ApacheHttpClientGet {
+public class RESTFulClientGetUsingApacheClientLibrary {
  
 	public static void main(String[] args) {
 	  try {
@@ -29,7 +29,7 @@ public class ApacheHttpClientGet {
                          new InputStreamReader((response.getEntity().getContent())));
  
 		String output;
-		System.out.println("Output from Server .... \n");
+		System.out.println("Successfully Executed RESTFul GET Using Apache HTTP Client Library .... \n");
 		while ((output = br.readLine()) != null) {
 			System.out.println(output);
 		}

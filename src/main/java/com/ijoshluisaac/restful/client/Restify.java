@@ -17,12 +17,18 @@ public class Restify {
 		HttpClient httpClient = new DefaultHttpClient();
 
 	    try {
-	        HttpPost request = new HttpPost("http://sr-recruit.herokuapp.com/");
-	        StringEntity params =new StringEntity("details={\"name\":\"myname\",\"age\":\"20\"} ");
-	        request.addHeader("content-type", "application/x-www-form-urlencoded");
+	        HttpPost request = new HttpPost("http://www.profitera.com/");
+	        StringEntity params =new StringEntity("message={\"message\":\"Joshua Uzochukwu Nwankwo\"} ");
+	        
+	        
+	        request.addHeader("Content-Type", "application/json");
+	        
+	        //application/json
+	        //application/x-www-form-urlencoded
 	        request.setEntity(params);
 	        HttpResponse response = httpClient.execute(request);
 
+	        System.out.println(response.getStatusLine().getStatusCode());
 	        // handle response here...
 	    }catch (Exception ex) {
 	        // handle exception here

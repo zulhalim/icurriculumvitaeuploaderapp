@@ -8,12 +8,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
  
-public class RESTFulClientPost {
+public class RESTFulClientPostUsingJavaHTTPClientLibrary {
  
-private static final String JSON_OBJECT = "{\"name\":\"Joshua Uzochukwu Nwankwo\",\"email\":\"joshluisaac@gmail.com\",\"about\":\"Motivated and goal orinted\",\"file\":\"NA\"}";
+private static final String JSON_OBJECT = "{\"name\":\"Joshua Uzochukwu Nwankwo\",\"email\":\"joshluisaac@gmail.com\",\"about\":\"Motivated,Loves new challenging stuffs and goal orinted\",\"file\":\"NA\"}";
 
 	
-	public RESTFulClientPost(){
+	public RESTFulClientPostUsingJavaHTTPClientLibrary(){
 		
 	}
 	
@@ -21,15 +21,20 @@ private static final String JSON_OBJECT = "{\"name\":\"Joshua Uzochukwu Nwankwo\
  
 	  try {
  
-		URL url = new URL("http://sr-recruit.herokuapp.com/");
+		URL url = new URL("http://www.profitera.com/");
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		
+		conn.setUseCaches(false);
+		conn.setDoInput(true);
 		conn.setDoOutput(true);
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("Content-Type", "application/json");
- 
+		System.out.println(conn.getResponseCode());
+		System.out.println(HttpURLConnection.HTTP_CREATED);
+		
 		
 		OutputStream os = conn.getOutputStream();
-		os.write(RESTFulClientPost.JSON_OBJECT.getBytes());
+		os.write(RESTFulClientPostUsingJavaHTTPClientLibrary.JSON_OBJECT.getBytes());
 		os.flush();
  
 		if (conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
@@ -41,7 +46,7 @@ private static final String JSON_OBJECT = "{\"name\":\"Joshua Uzochukwu Nwankwo\
 				(conn.getInputStream())));
  
 		String output;
-		System.out.println("Successfully Posted Data Via JSON ..... \n");
+		System.out.println("Successfully Posted Data Via JSON Using Java HTTP Client Library ..... \n");
 		while ((output = br.readLine()) != null) {
 			System.out.println(output);
 		}
