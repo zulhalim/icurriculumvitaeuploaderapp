@@ -29,7 +29,7 @@ public class ResumeJSONClient {
 		// Create a URLConnection
 
 		URL url = new URL(
-				URL_SR);
+				URL_SR); //change URL_SR to URL_HK to test the other webservice
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
 		connection.setDoOutput(true);

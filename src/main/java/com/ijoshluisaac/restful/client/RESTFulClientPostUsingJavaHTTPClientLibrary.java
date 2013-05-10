@@ -20,7 +20,7 @@ public class RESTFulClientPostUsingJavaHTTPClientLibrary {
 	public static void main(String[] args) {
 
 		try {
-			URL url = new URL(URL_SR);
+			URL url = new URL(URL_SR); //change URL_SR to URL_HK to test the other webservice
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
