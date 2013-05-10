@@ -9,20 +9,27 @@ import java.net.URL;
 
 public class ResumeJSONClient {
 
+	
 	/**
 	 * @param args
 	 * @throws IOException
 	 * @throws MalformedURLException
 	 */
+	
+	// JSON content to post
+	private static final String JSON_OBJECT = "{\"name\":\"Joshua U. Nwankwo\",\"email\":\"joshluisaac@gmail.com\",\"about\":\"Motivated,Loves new challenging stuffs and goal orinted\"}";
+    
+	//Web services URLs
+	private static final String URL_SR = "http://sr-recruit.herokuapp.com/resumes";
+    private static final String URL_HK = "http://localhost:8080/RESTfulresume/restservicespath/json/resume/post";
+	
 	public static void main(String[] args) throws MalformedURLException,
 			IOException {
 
-		// JSON content to post
-		java.lang.String contentToPost = "{\"name\":\"Joshua U. Nwankwo\",\"email\":\"joshluisaac@gmail.com\",\"about\":\"Motivated,Loves new challenging stuffs and goal orinted\"}";
 		// Create a URLConnection
 
 		URL url = new URL(
-				"http://localhost:8080/RESTfulresume/restservicespath/json/resume/post");
+				URL_SR);
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
 		connection.setDoOutput(true);
@@ -32,7 +39,7 @@ public class ResumeJSONClient {
 
 		// Post JSON content
 		OutputStream stream = connection.getOutputStream();
-		stream.write(contentToPost.getBytes());
+		stream.write(JSON_OBJECT.getBytes());
 		stream.flush();
 
 		// Read the response
