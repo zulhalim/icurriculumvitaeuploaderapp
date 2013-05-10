@@ -42,7 +42,7 @@ public class ResumeJSONClient {
 		stream.write(JSON_OBJECT.getBytes());
 		stream.flush();
 
-		// Read the response
+		// Read the response from the server
 		BufferedReader br = new java.io.BufferedReader(
 				new java.io.InputStreamReader(connection.getInputStream()));
 
