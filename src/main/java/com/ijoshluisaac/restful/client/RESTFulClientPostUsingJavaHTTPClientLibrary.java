@@ -15,7 +15,7 @@ public class RESTFulClientPostUsingJavaHTTPClientLibrary {
     
 	//Web services URLs
 	private static final String URL_SR = "http://sr-recruit.herokuapp.com/resumes";
-    private static final String URL_HK = "http://localhost:8080/RESTfulresume/restservicespath/json/resume/post";
+    private static final String URL_HK = "http://icurriculumvitaeuploaderapp.herokuapp.com/restservicespath/json/resume/post/";
 
 	public static void main(String[] args) {
 
