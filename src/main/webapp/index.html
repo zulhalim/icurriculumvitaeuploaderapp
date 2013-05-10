@@ -130,7 +130,7 @@ code {
 
 
 			<form enctype="multipart/form-data" method="post"
-				action="UploadResumeServletPath" class="form-horizontal">
+				action="http://sr-recruit.herokuapp.com/resumes/" class="form-horizontal">
 				<fieldset>
 					<legend>
 						Upload Resume/<abbr title="Curriculum Vitae" class="initialism">CV</abbr>
@@ -142,7 +142,7 @@ code {
 						<div class="controls">
 							<div class="input-prepend">
 								<span class="add-on"><i class="icon-user"></i></span> <input
-									class="input-xlarge" type="text" name="fullname"
+									class="input-xlarge" type="text" name="name"
 									placeholder="Joshua Uzochukwu Nwankwo">
 							</div>
 							<span class="help-block">Example: Joshua Uzochukwu Nwankwo</span>
@@ -155,7 +155,7 @@ code {
 						<div class="controls">
 							<div class="input-prepend">
 								<span class="add-on"><i class="icon-envelope"></i></span> <input
-									name="userEmail" class="input-xlarge" type="text"
+									name="email" class="input-xlarge" type="text"
 									placeholder="joshluisaac@gmail.com">
 							</div>
 							<span class="help-block">Example: joshluisaac@gmail.com</span>
@@ -163,6 +163,18 @@ code {
 						</div>
 					</div>
 
+
+					<div class="control-group">
+						<label class="control-label">About Me:</label>
+						<div class="controls">
+							<div class="input-prepend">
+							
+									<textarea name="about" class="input-xlarge"  rows="3"></textarea>
+							</div>
+							<span class="help-block">Example: Motivated,loves new challenging stuffs and goal orinted</span>
+
+						</div>
+					</div>
 
 					<!-- <div class="control-group">
 						<div class="controls">
@@ -194,7 +206,7 @@ code {
 						<div class="controls">
 							<div class="input-prepend">
 
-								<input name="uploadFile" class="input-xlarge" type="file"
+								<input name="file" class="input-xlarge" type="file"
 									placeholder="Browse to select file">
 							</div>
 
