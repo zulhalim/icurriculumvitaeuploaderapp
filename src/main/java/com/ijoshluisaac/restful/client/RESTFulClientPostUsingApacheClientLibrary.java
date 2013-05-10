@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -18,13 +19,12 @@ public class RESTFulClientPostUsingApacheClientLibrary {
  
 	  try {
  
-		DefaultHttpClient httpClient = new DefaultHttpClient();
+		  HttpClient httpClient = new DefaultHttpClient();
 		HttpPost postRequest = new HttpPost(
-			"http://sr-recruit.herokuapp.com/");
+			"http://sr-recruit.herokuapp.com/resumes");
 		
  
 		StringEntity input = new StringEntity(RESTFulClientPostUsingApacheClientLibrary.JSON_OBJECT);
-		//input.setContentType("application/json");
 		postRequest.addHeader("content-type", "application/json");
 		postRequest.setEntity(input);
  

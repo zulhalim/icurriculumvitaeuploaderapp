@@ -10,31 +10,25 @@ import java.net.URL;
  
 public class RESTFulClientPostUsingJavaHTTPClientLibrary {
  
-private static final String JSON_OBJECT = "{\"name\":\"Joshua Uzochukwu Nwankwo\",\"email\":\"joshluisaac@gmail.com\",\"about\":\"Motivated,Loves new challenging stuffs and goal orinted\",\"file\":\"NA\"}";
-
-	
-	public RESTFulClientPostUsingJavaHTTPClientLibrary(){
-		
-	}
-	
+	// http://localhost:8080/RESTfulExample/json/product/post
 	public static void main(String[] args) {
  
 	  try {
- 
-		URL url = new URL("http://www.profitera.com/");
+           //http://localhost:8080/RESTfulExample/restservicespath/json/metallica/post
+		  //"{\"title\":\"Enter Sandman\",\"singer\":\"Metallica\"}"
+		  
+		  //http://sr-recruit.herokuapp.com/resume
+		  //"{\"name\":\"Joshua Uzochukwu Nwankwo\",\"email\":\"joshluisaac@gmail.com\",\"about\":\"Motivated and goal orinted\",\"file\":\"NA\"}"
+		URL url = new URL("http://sr-recruit.herokuapp.com/resumes");
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-		
-		conn.setUseCaches(false);
-		conn.setDoInput(true);
 		conn.setDoOutput(true);
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("Content-Type", "application/json");
-		System.out.println(conn.getResponseCode());
-		System.out.println(HttpURLConnection.HTTP_CREATED);
-		
-		
+ 
+		String input = "{\"\":}";
+ 
 		OutputStream os = conn.getOutputStream();
-		os.write(RESTFulClientPostUsingJavaHTTPClientLibrary.JSON_OBJECT.getBytes());
+		os.write(input.getBytes());
 		os.flush();
  
 		if (conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
@@ -46,7 +40,7 @@ private static final String JSON_OBJECT = "{\"name\":\"Joshua Uzochukwu Nwankwo\
 				(conn.getInputStream())));
  
 		String output;
-		System.out.println("Successfully Posted Data Via JSON Using Java HTTP Client Library ..... \n");
+		System.out.println("Output from Server .... \n");
 		while ((output = br.readLine()) != null) {
 			System.out.println(output);
 		}
@@ -66,4 +60,3 @@ private static final String JSON_OBJECT = "{\"name\":\"Joshua Uzochukwu Nwankwo\
 	}
  
 }
-

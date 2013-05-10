@@ -4,11 +4,13 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 
+
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 
+<!--
 	<servlet>
 		<servlet-name>hello</servlet-name>
 		<servlet-class>com.example.HelloServlet</servlet-class>
@@ -17,7 +19,7 @@
 	<servlet-mapping>
 		<servlet-name>hello</servlet-name>
 		<url-pattern>/hello</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 
 
 	<servlet>
@@ -32,6 +34,23 @@
 		<url-pattern>/UploadResumeServletPath</url-pattern>
 	</servlet-mapping>
 
+	
+	
+		<servlet>
+		<description>An Reverse Servlet</description>
+		<display-name>ReverseServlet</display-name>
+		<servlet-name>ReverseServlet</servlet-name>
+		<servlet-class>com.ijoshluisaac.my.ReverseServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ReverseServlet</servlet-name>
+		<url-pattern>/ReverseServletPath</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+
 	<servlet>
 	
 	    <!-- Include support for RESTFUL Servlet container -->
@@ -40,7 +59,7 @@
 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
 		<init-param>
 			<param-name>com.sun.jersey.config.property.packages</param-name>
-			<param-value>com.joshluisaac.restful.webservice.my</param-value>
+			<param-value>com.ijoshluisaac.restful.services</param-value>
 		</init-param>
 		
 		<!-- Include support for POJO  -->

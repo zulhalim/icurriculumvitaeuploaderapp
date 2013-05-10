@@ -17,7 +17,7 @@ public class Restify {
 		HttpClient httpClient = new DefaultHttpClient();
 
 	    try {
-	        HttpPost request = new HttpPost("http://www.profitera.com/");
+	        HttpPost request = new HttpPost("http://sr-recruit.herokuapp.com/resume");
 	        StringEntity params =new StringEntity("message={\"message\":\"Joshua Uzochukwu Nwankwo\"} ");
 	        
 	        
